@@ -19,7 +19,7 @@ public class UserController {
         this.userService = userService;
     }
 
-    @GetMapping
+    @GetMapping("getAllAvailableItems")
     public ResponseEntity<List<GroceryItem>> getAvailableGroceryItems() {
         return ResponseEntity.ok(userService.getAvailableGroceryItems());
     }

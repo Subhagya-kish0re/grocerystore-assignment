@@ -18,12 +18,12 @@ public class AdminController {
         this.adminService = adminService;
     }
 
-    @PostMapping
+    @PostMapping("add-products")
     public ResponseEntity<GroceryItem> addGroceryItem(@RequestBody GroceryItemRequest request) {
         return ResponseEntity.ok(adminService.addGroceryItem(request));
     }
 
-    @GetMapping
+    @GetMapping("getAllItems")
     public ResponseEntity<List<GroceryItem>> getAllGroceryItems() {
         return ResponseEntity.ok(adminService.getAllGroceryItems());
     }
